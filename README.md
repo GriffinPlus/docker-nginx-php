@@ -1,4 +1,4 @@
-# Docker Base Image with NGINX and PHP7-FPM
+# Docker Image with NGINX and PHP7-FPM
 
 [![Build Status](https://travis-ci.org/cloudycube/docker-nginx-php7.svg?branch=master)](https://travis-ci.org/cloudycube/docker-nginx-php7) [![Docker 
 Pulls](https://img.shields.io/docker/pulls/cloudycube/docker-nginx-php7.svg)](https://hub.docker.com/r/cloudycube/docker-nginx-php7) [![Github 
@@ -7,7 +7,13 @@ Stars](https://img.shields.io/github/contributors/cloudycube/docker-nginx-php7.s
 Forks](https://img.shields.io/github/forks/cloudycube/docker-nginx-php7.svg?label=github%20forks)](https://github.com/cloudycube/docker-nginx-php7)
 
 ## Overview
-This is a Docker base image deriving from the [base-supervisor](https://github.com/cloudycube/docker-base-supervisor) image. At last this image is based on Ubuntu 16.04 LTS. It adds NGINX and PHP7-FPM (including common extensions) directly from Ubuntu's package repository and avoids using external repositories. The following PHP extensions are included:
+This is a Docker image deriving from the [docker-base-supervisor](https://github.com/cloudycube/docker-base-supervisor) image. Summed up  this image is brings along the following features:
+- Based on Ubuntu 16.04 LTS
+- Support for running multiple services via *supervisord*
+- *CloudyCube Container Startup System*
+- *NGINX* and *PHP7-FPM* directly from Ubuntu's package repository (no external repositories needed)
+
+The following PHP extensions are included in the image:
 - `bcmath`
 - `bz2`
 - `curl`
@@ -42,7 +48,7 @@ This image belongs to a set of Docker images created for project [CloudyCube](ht
 
 #### STARTUP_VERBOSITY
 
-The *CloudyCube Container Startup System* (see [base image](https://github.com/cloudycube/docker-base-supervisor) for details) contains a simple logging system with four log levels (error, warning, note, debug) messages can be associated with. The environment variable STARTUP_VERBOSITY determines the maximum log level a message can  have to get into the log:
+The *CloudyCube Container Startup System* (see [base image](https://github.com/cloudycube/docker-base-supervisor) for details) contains a simple logging system with four log levels (error, warning, note, debug) messages can be associated with. The environment variable STARTUP_VERBOSITY determines the maximum log level a message may have to get into the log:
 
 - 0 => Only errors are logged.
 - 1 => Errors and warnings are logged.
