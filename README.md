@@ -44,7 +44,13 @@ The following PHP extensions are included in the image:
 
 This image belongs to a set of Docker images created for project [CloudyCube](http://www.falk-online.eu/projekte/cloudycube). The homepage is in German only, but you will find everything needed to get it working here as well.
 
-## Environment Variables
+## For Users
+
+### Defining Content to Serve
+
+Any content that is placed below `/var/www/html` is served. There are two ways to let NGINX serve your content. You can either link in a volume containing your content or derive your own image from this image and copy the content into the said directory.
+
+### Environment Variables
 
 #### STARTUP_VERBOSITY
 
@@ -57,4 +63,4 @@ The *CloudyCube Container Startup System* (see [base image](https://github.com/c
 
 ## For Developers
 
-TBD
+TBD...
