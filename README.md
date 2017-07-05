@@ -135,7 +135,3 @@ The *CloudyCube Container Startup System* (see [base image](https://github.com/c
 - 1 => Errors and warnings are logged.
 - 2 => Errors, warnings and notes are logged.
 - 3 => All messages are logged.
-
-## For Developers
-
-TBD...
