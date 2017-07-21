@@ -1,4 +1,4 @@
-FROM cloudycube/docker-base-supervisor
+FROM cloudycube/base-supervisor
 MAINTAINER Sascha Falk <sascha@falk-online.eu>
 
 # Update image and install additional packages
