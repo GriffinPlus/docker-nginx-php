@@ -1,7 +1,7 @@
 # Docker Image with NGINX and PHP7-FPM
 
 [![Build Status](https://travis-ci.org/cloudycube/docker-nginx-php7.svg?branch=master)](https://travis-ci.org/cloudycube/docker-nginx-php7) [![Docker 
-Pulls](https://img.shields.io/docker/pulls/cloudycube/docker-nginx-php7.svg)](https://hub.docker.com/r/cloudycube/docker-nginx-php7) [![Github 
+Pulls](https://img.shields.io/docker/pulls/cloudycube/nginx-php7.svg)](https://hub.docker.com/r/cloudycube/nginx-php7) [![Github 
 Stars](https://img.shields.io/github/stars/cloudycube/docker-nginx-php7.svg?label=github%20%E2%98%85)](https://github.com/cloudycube/docker-nginx-php7) [![Github 
 Stars](https://img.shields.io/github/contributors/cloudycube/docker-nginx-php7.svg)](https://github.com/cloudycube/docker-nginx-php7) [![Github 
 Forks](https://img.shields.io/github/forks/cloudycube/docker-nginx-php7.svg?label=github%20forks)](https://github.com/cloudycube/docker-nginx-php7)
