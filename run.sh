@@ -14,5 +14,5 @@ docker run -it \
     --env PHP_FPM_PM_START_SERVERS=5 \
     --env PHP_INI_DATE_TIMEZONE=UTC \
     --env PHP_INI_MEMORY_LIMIT=128M \
-    cloudycube/docker-nginx-php7 \
+    cloudycube/nginx-php7 \
     run-and-enter

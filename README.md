@@ -7,7 +7,7 @@ Stars](https://img.shields.io/github/contributors/cloudycube/docker-nginx-php7.s
 Forks](https://img.shields.io/github/forks/cloudycube/docker-nginx-php7.svg?label=github%20forks)](https://github.com/cloudycube/docker-nginx-php7)
 
 ## Overview
-This is a Docker image deriving from the [docker-base-supervisor](https://github.com/cloudycube/docker-base-supervisor) image. Summed up this image brings along the following features:
+This is a Docker image deriving from the [base-supervisor](https://github.com/cloudycube/docker-base-supervisor) image. Summed up this image brings along the following features:
 - Based on Ubuntu 16.04 LTS
 - Support for running multiple services via *supervisord*
 - *CloudyCube Container Startup System*
