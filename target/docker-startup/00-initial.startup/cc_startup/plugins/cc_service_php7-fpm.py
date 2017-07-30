@@ -10,7 +10,6 @@ import re
 from configparser import ConfigParser
 from ..cc_helpers import read_text_file, write_text_file, replace_php_define, replace_php_variable, generate_password, get_env_setting_bool, get_env_setting_integer, get_env_setting_string
 from ..cc_log import Log
-from ..cc_phpconfig import PhpConfigObj
 from ..cc_service import Service
 
 
