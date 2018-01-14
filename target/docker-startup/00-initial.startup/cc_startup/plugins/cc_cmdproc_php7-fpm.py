@@ -8,33 +8,17 @@ import os
 import re
 
 from configparser import ConfigParser
-from ..cc_helpers import read_text_file, write_text_file, replace_php_define, replace_php_variable, generate_password, get_env_setting_bool, get_env_setting_integer, get_env_setting_string
+
 from ..cc_log import Log
-from ..cc_service import Service
+from ..cc_cmdproc import CommandProcessor, PositionalArgument, NamedArgument
+from ..cc_errors import GeneralError, CommandLineArgumentError, FileNotFoundError, IoError, EXIT_CODE_SUCCESS
+from ..cc_helpers import read_text_file, write_text_file, replace_php_define, replace_php_variable, generate_password, get_env_setting_bool, get_env_setting_integer, get_env_setting_string
 
 
-# ---------------------------------------------------------------------------------------------------------------------
+# -------------------------------------------------------------------------------------------------------------------------------------------------------------
 
 
 CONFIGURATION_FILE_PATH = '/etc/php/7.0/fpm/pool.d/www.conf'
-
-
-# ---------------------------------------------------------------------------------------------------------------------
-
-
-# name of the service
-service_name = 'php7-fpm'
-
-# determines whether the service is run by the startup script
-enabled = True
-
-def get_service():
-    "Returns an instance of the service provided by the service plugin."
-    return PHP7_FPM()
-
-
-# ---------------------------------------------------------------------------------------------------------------------
-
 
 #                                       setting name                type   min   max
 PHP_FPM_SETTINGS = {
@@ -55,30 +39,54 @@ PHP_INI_SETTINGS = {
 }
 
 
-# ---------------------------------------------------------------------------------------------------------------------
+# -------------------------------------------------------------------------------------------------------------------------------------------------------------
 
 
-class PHP7_FPM(Service):
+# name of the processor
+processor_name = 'php7-fpm'
 
-    def prepare(self):
-        """
-        Reads environment variables and checks preconditions the following call to configure() needs to succeed. In case
-        of anything being screwed in the configuration or system, this method should throw an exception to abort starting
-        up before configure() modifies any configuration files.
-        """
+# determines whether the processor is run by the startup script
+enabled = True
+
+def get_processor():
+    "Returns an instance of the processor provided by the command processor plugin."
+    return PHP7_FPM()
+
+
+# -------------------------------------------------------------------------------------------------------------------------------------------------------------
+
+
+class PHP7_FPM(CommandProcessor):
+
+    # -------------------------------------------------------------------------------------------------------------------------------------
+
+    def __init__(self):
+
+        # let base class perform its initialization
+        super().__init__()
+
+        # register command handlers
+        self.add_handler(self.run, PositionalArgument("run"))
+        self.add_handler(self.run, PositionalArgument("run-and-enter"))
+
+
+    # -------------------------------------------------------------------------------------------------------------------------------------
+
+
+    def run(self, pos_args, named_args):
 
         # load configuration file
         # ---------------------------------------------------------------------------------------
         if os.path.exists(CONFIGURATION_FILE_PATH):
-            self._config = ConfigParser()
-            self._config.read(CONFIGURATION_FILE_PATH, encoding='utf-8')
+            config = ConfigParser()
+            config.read(CONFIGURATION_FILE_PATH, encoding='utf-8')
         else:
-           raise RuntimeError('The configuraton file ({0}) does not exist.'.format(CONFIGURATION_FILE_PATH))
+           raise FileNotFoundError('The configuraton file ({0}) does not exist.'.format(CONFIGURATION_FILE_PATH))
 
         # the entire configuration is in section 'www'
         # ---------------------------------------------------------------------------------------
 
-        section = self._config['www']
+        section = config['www']
 
         # PHP-FPM settings
         # ---------------------------------------------------------------------------------------
@@ -130,20 +138,13 @@ class PHP7_FPM(Service):
             else:
                 raise RuntimeError('Invalid variable type ({0}).'.format(value[1]))
 
-
-
-    # ---------------------------------------------------------------------------------------------------------------------
-
-
-    def configure(self):
-        """
-        Creates/modifies the configuration file according to environment variables.
-        """
-
         # write configuraton file
+        # ---------------------------------------------------------------------------------------
         with open(CONFIGURATION_FILE_PATH, 'w') as configfile:
-            self._config.write(configfile)
+            config.write(configfile)
 
-    # ---------------------------------------------------------------------------------------------------------------------
 
+        return EXIT_CODE_SUCCESS
+
+    # -------------------------------------------------------------------------------------------------------------------------------------
 
