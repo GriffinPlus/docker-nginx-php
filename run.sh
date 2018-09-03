@@ -1,6 +1,6 @@
 #!/bin/bash
 
-# This script starts a new instance of the cloudycube/docker-nginx-php7 container and opens a shell in it.
+# This script starts a new instance of the griffinplus/nginx-php7 container and opens a shell in it.
 # It is useful in cases where some debugging is needed...
 
 docker run -it \
@@ -14,5 +14,5 @@ docker run -it \
     --env PHP_FPM_PM_START_SERVERS=5 \
     --env PHP_INI_DATE_TIMEZONE=UTC \
     --env PHP_INI_MEMORY_LIMIT=128M \
-    cloudycube/nginx-php7 \
+    griffinplus/nginx-php7 \
     run-and-enter

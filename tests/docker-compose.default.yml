@@ -2,4 +2,4 @@ version: '2'
 
 services:
   nginx-php7:
-    image: cloudycube/docker-nginx-php7
+    image: griffinplus/nginx-php7

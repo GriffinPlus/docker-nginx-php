@@ -1,3 +1,3 @@
 #!/bin/bash
 
-docker build -t cloudycube/nginx-php7 .
+docker build -t griffinplus/nginx-php7 .

@@ -1,16 +1,16 @@
 # Docker Image with NGINX and PHP7-FPM
 
-[![Build Status](https://travis-ci.org/cloudycube/docker-nginx-php7.svg?branch=master)](https://travis-ci.org/cloudycube/docker-nginx-php7) [![Docker 
-Pulls](https://img.shields.io/docker/pulls/cloudycube/nginx-php7.svg)](https://hub.docker.com/r/cloudycube/nginx-php7) [![Github 
-Stars](https://img.shields.io/github/stars/cloudycube/docker-nginx-php7.svg?label=github%20%E2%98%85)](https://github.com/cloudycube/docker-nginx-php7) [![Github 
-Stars](https://img.shields.io/github/contributors/cloudycube/docker-nginx-php7.svg)](https://github.com/cloudycube/docker-nginx-php7) [![Github 
-Forks](https://img.shields.io/github/forks/cloudycube/docker-nginx-php7.svg?label=github%20forks)](https://github.com/cloudycube/docker-nginx-php7)
+[![Build Status](https://travis-ci.org/GriffinPlus/docker-nginx-php7.svg?branch=master)](https://travis-ci.org/GriffinPlus/docker-nginx-php7) [![Docker 
+Pulls](https://img.shields.io/docker/pulls/GriffinPlus/nginx-php7.svg)](https://hub.docker.com/r/GriffinPlus/nginx-php7) [![Github 
+Stars](https://img.shields.io/github/stars/GriffinPlus/docker-nginx-php7.svg?label=github%20%E2%98%85)](https://github.com/GriffinPlus/docker-nginx-php7) [![Github 
+Stars](https://img.shields.io/github/contributors/GriffinPlus/docker-nginx-php7.svg)](https://github.com/GriffinPlus/docker-nginx-php7) [![Github 
+Forks](https://img.shields.io/github/forks/GriffinPlus/docker-nginx-php7.svg?label=github%20forks)](https://github.com/GriffinPlus/docker-nginx-php7)
 
 ## Overview
-This is a Docker image deriving from the [base-supervisor](https://github.com/cloudycube/docker-base-supervisor) image. Summed up this image brings along the following features:
+This is a Docker image deriving from the [base-supervisor](https://github.com/griffinplus/docker-base-supervisor) image. Summed up this image brings along the following features:
 - Based on Ubuntu 16.04 LTS
 - Support for running multiple services via *supervisord*
-- *CloudyCube Container Startup System*
+- *Griffin+ Container Startup System*
 - *NGINX* and *PHP7-FPM* directly from Ubuntu's package repository (no external repositories needed)
 
 The following PHP extensions are included in the image:
@@ -41,8 +41,6 @@ The following PHP extensions are included in the image:
 - `xmlrpc`
 - `xsl`
 - `zip`
-
-This image belongs to a set of Docker images created for project [CloudyCube](http://www.falk-online.eu/projekte/cloudycube). The homepage is in German only, but you will find everything needed to get it working here as well.
 
 ## For Users
 
@@ -129,7 +127,7 @@ Default Value: `32M`
 
 #### STARTUP_VERBOSITY
 
-Determines the verbosity of the *CloudyCube Container Startup System* (see [here](https://github.com/cloudycube/docker-base-supervisor) for details).
+Determines the verbosity of the *Griffin+ Container Startup System* (see [here](https://github.com/griffinplus/docker-base-supervisor) for details).
 
 - 0 => Logging is disabled.
 - 1 => Only errors are logged.
