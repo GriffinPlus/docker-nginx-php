@@ -1,4 +1,4 @@
-# Docker Image with NGINX and PHP7-FPM
+# Docker Image with NGINX and PHP7.2-FPM
 
 [![Build Status](https://travis-ci.com/GriffinPlus/docker-nginx-php7.svg?branch=master)](https://travis-ci.com/GriffinPlus/docker-nginx-php7)
 [![Docker Pulls](https://img.shields.io/docker/pulls/griffinplus/nginx-php7.svg)](https://hub.docker.com/r/griffinplus/nginx-php7)
@@ -11,7 +11,7 @@ This is a Docker image deriving from the [base-supervisor](https://github.com/gr
 - Based on Ubuntu 18.04 LTS
 - Support for running multiple services via *supervisord*
 - Griffin+ Container Startup System (see [here](https://github.com/griffinplus/docker-base) for details)
-- *NGINX* and *PHP7-FPM (v7.2)* directly from Ubuntu's package repository (no external repositories needed)
+- *NGINX* and *PHP7.2-FPM* directly from Ubuntu's package repository (no external repositories needed)
 
 The following PHP extensions are included in the image:
 - `bcmath`
