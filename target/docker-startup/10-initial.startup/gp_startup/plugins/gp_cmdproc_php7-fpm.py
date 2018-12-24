@@ -9,16 +9,16 @@ import re
 
 from configparser import ConfigParser
 
-from ..cc_log import Log
-from ..cc_cmdproc import CommandProcessor, PositionalArgument, NamedArgument
-from ..cc_errors import GeneralError, CommandLineArgumentError, FileNotFoundError, IoError, EXIT_CODE_SUCCESS
-from ..cc_helpers import read_text_file, write_text_file, replace_php_define, replace_php_variable, generate_password, get_env_setting_bool, get_env_setting_integer, get_env_setting_string
+from ..gp_log import Log
+from ..gp_cmdproc import CommandProcessor, PositionalArgument, NamedArgument
+from ..gp_errors import GeneralError, CommandLineArgumentError, FileNotFoundError, IoError, EXIT_CODE_SUCCESS
+from ..gp_helpers import read_text_file, write_text_file, replace_php_define, replace_php_variable, generate_password, get_env_setting_bool, get_env_setting_integer, get_env_setting_string
 
 
 # -------------------------------------------------------------------------------------------------------------------------------------------------------------
 
 
-CONFIGURATION_FILE_PATH = '/etc/php/7.0/fpm/pool.d/www.conf'
+CONFIGURATION_FILE_PATH = '/etc/php/7.2/fpm/pool.d/www.conf'
 
 #                                       setting name                type   min   max
 PHP_FPM_SETTINGS = {

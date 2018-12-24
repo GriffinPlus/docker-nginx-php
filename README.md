@@ -1,17 +1,17 @@
 # Docker Image with NGINX and PHP7-FPM
 
-[![Build Status](https://travis-ci.org/GriffinPlus/docker-nginx-php7.svg?branch=master)](https://travis-ci.org/GriffinPlus/docker-nginx-php7) [![Docker 
-Pulls](https://img.shields.io/docker/pulls/GriffinPlus/nginx-php7.svg)](https://hub.docker.com/r/GriffinPlus/nginx-php7) [![Github 
-Stars](https://img.shields.io/github/stars/GriffinPlus/docker-nginx-php7.svg?label=github%20%E2%98%85)](https://github.com/GriffinPlus/docker-nginx-php7) [![Github 
-Stars](https://img.shields.io/github/contributors/GriffinPlus/docker-nginx-php7.svg)](https://github.com/GriffinPlus/docker-nginx-php7) [![Github 
-Forks](https://img.shields.io/github/forks/GriffinPlus/docker-nginx-php7.svg?label=github%20forks)](https://github.com/GriffinPlus/docker-nginx-php7)
+[![Build Status](https://travis-ci.com/GriffinPlus/docker-nginx-php7.svg?branch=master)](https://travis-ci.com/GriffinPlus/docker-nginx-php7)
+[![Docker Pulls](https://img.shields.io/docker/pulls/GriffinPlus/nginx-php7.svg)](https://hub.docker.com/r/griffinplus/nginx-php7)
+[![Github Stars](https://img.shields.io/github/stars/GriffinPlus/docker-nginx-php7.svg?label=github%20%E2%98%85)](https://github.com/griffinplus/docker-nginx-php7)
+[![Github Stars](https://img.shields.io/github/contributors/griffinplus/docker-nginx-php7.svg)](https://github.com/griffinplus/docker-nginx-php7)
+[![Github Forks](https://img.shields.io/github/forks/griffinplus/docker-nginx-php7.svg?label=github%20forks)](https://github.com/griffinplus/docker-nginx-php7)
 
 ## Overview
 This is a Docker image deriving from the [base-supervisor](https://github.com/griffinplus/docker-base-supervisor) image. Summed up this image brings along the following features:
-- Based on Ubuntu 16.04 LTS
+- Based on Ubuntu 18.04 LTS
 - Support for running multiple services via *supervisord*
-- *Griffin+ Container Startup System*
-- *NGINX* and *PHP7-FPM* directly from Ubuntu's package repository (no external repositories needed)
+- Griffin+ Container Startup System (see [here](https://github.com/griffinplus/docker-base) for details)
+- *NGINX* and *PHP7-FPM (v7.2)* directly from Ubuntu's package repository (no external repositories needed)
 
 The following PHP extensions are included in the image:
 - `bcmath`
@@ -27,7 +27,6 @@ The following PHP extensions are included in the image:
 - `json`
 - `ldap`
 - `mbstring`
-- `mcrypt`
 - `mysql`
 - `odbc`
 - `opcache` 
