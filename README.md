@@ -1,8 +1,8 @@
 # Docker Image with NGINX and PHP7-FPM
 
 [![Build Status](https://travis-ci.com/GriffinPlus/docker-nginx-php7.svg?branch=master)](https://travis-ci.com/GriffinPlus/docker-nginx-php7)
-[![Docker Pulls](https://img.shields.io/docker/pulls/GriffinPlus/nginx-php7.svg)](https://hub.docker.com/r/griffinplus/nginx-php7)
-[![Github Stars](https://img.shields.io/github/stars/GriffinPlus/docker-nginx-php7.svg?label=github%20%E2%98%85)](https://github.com/griffinplus/docker-nginx-php7)
+[![Docker Pulls](https://img.shields.io/docker/pulls/griffinplus/nginx-php7.svg)](https://hub.docker.com/r/griffinplus/nginx-php7)
+[![Github Stars](https://img.shields.io/github/stars/griffinplus/docker-nginx-php7.svg?label=github%20%E2%98%85)](https://github.com/griffinplus/docker-nginx-php7)
 [![Github Stars](https://img.shields.io/github/contributors/griffinplus/docker-nginx-php7.svg)](https://github.com/griffinplus/docker-nginx-php7)
 [![Github Forks](https://img.shields.io/github/forks/griffinplus/docker-nginx-php7.svg?label=github%20forks)](https://github.com/griffinplus/docker-nginx-php7)
 
