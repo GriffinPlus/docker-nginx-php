@@ -1,10 +1,10 @@
 # Docker Image with NGINX and PHP7.2-FPM
 
-[![Build Status](https://travis-ci.com/GriffinPlus/docker-nginx-php72.svg?branch=master)](https://travis-ci.com/GriffinPlus/docker-nginx-php72)
-[![Docker Pulls](https://img.shields.io/docker/pulls/griffinplus/nginx-php72.svg)](https://hub.docker.com/r/griffinplus/nginx-php72)
-[![Github Stars](https://img.shields.io/github/stars/griffinplus/docker-nginx-php72.svg?label=github%20%E2%98%85)](https://github.com/griffinplus/docker-nginx-php72)
-[![Github Stars](https://img.shields.io/github/contributors/griffinplus/docker-nginx-php72.svg)](https://github.com/griffinplus/docker-nginx-php72)
-[![Github Forks](https://img.shields.io/github/forks/griffinplus/docker-nginx-php72.svg?label=github%20forks)](https://github.com/griffinplus/docker-nginx-php72)
+[![Build Status](https://travis-ci.com/GriffinPlus/docker-nginx-php7.2.svg?branch=master)](https://travis-ci.com/GriffinPlus/docker-nginx-php7.2)
+[![Docker Pulls](https://img.shields.io/docker/pulls/griffinplus/nginx-php7.2.svg)](https://hub.docker.com/r/griffinplus/nginx-php7.2)
+[![Github Stars](https://img.shields.io/github/stars/griffinplus/docker-nginx-php7.2.svg?label=github%20%E2%98%85)](https://github.com/griffinplus/docker-nginx-php7.2)
+[![Github Stars](https://img.shields.io/github/contributors/griffinplus/docker-nginx-php7.2.svg)](https://github.com/griffinplus/docker-nginx-php7.2)
+[![Github Forks](https://img.shields.io/github/forks/griffinplus/docker-nginx-php7.2.svg?label=github%20forks)](https://github.com/griffinplus/docker-nginx-php7.2)
 
 ## Overview
 This is a Docker image deriving from the [base-supervisor](https://github.com/griffinplus/docker-base-supervisor) image. Summed up this image brings along the following features:
