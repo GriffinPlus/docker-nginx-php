@@ -7,10 +7,10 @@
 [![Github Forks](https://img.shields.io/github/forks/griffinplus/docker-nginx-php7.2.svg?label=github%20forks)](https://github.com/griffinplus/docker-nginx-php7.2)
 
 ## Overview
-This is a Docker image deriving from the [base-supervisor](https://github.com/griffinplus/docker-base-supervisor) image. Summed up this image brings along the following features:
+This is a Docker image deriving from the [base-supervisor](https://github.com/GriffinPlus/docker-base/tree/master/base-supervisor) image. Summed up this image brings along the following features:
 - Based on Ubuntu 18.04 LTS
 - Support for running multiple services via *supervisord*
-- Griffin+ Container Startup System (see [here](https://github.com/griffinplus/docker-base) for details)
+- Griffin+ Container Startup System (see [here](https://github.com/GriffinPlus/docker-base/tree/master/base) for details)
 - *NGINX* and *PHP7.2-FPM* directly from Ubuntu's package repository (no external repositories needed)
 
 The following PHP extensions are included in the image:
