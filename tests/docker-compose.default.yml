@@ -1,5 +1,5 @@
 version: '2'
 
 services:
-  nginx-php7:
-    image: griffinplus/nginx-php7
+  nginx-php7.2:
+    image: griffinplus/nginx-php7.2
