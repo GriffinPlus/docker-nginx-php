@@ -1,13 +1,15 @@
 # Docker Image with NGINX and PHP7.2-FPM
 
-[![Build Status](https://travis-ci.com/GriffinPlus/docker-nginx-php7.2.svg?branch=master)](https://travis-ci.com/GriffinPlus/docker-nginx-php7.2)
+[![Build Status](https://dev.azure.com/griffinplus/Docker%20Images/_apis/build/status/9?branchName=master)](https://dev.azure.com/griffinplus/Docker%20Images/_build/latest?definitionId=9&branchName=master)
 [![Docker Pulls](https://img.shields.io/docker/pulls/griffinplus/nginx-php7.2.svg)](https://hub.docker.com/r/griffinplus/nginx-php7.2)
 [![Github Stars](https://img.shields.io/github/stars/griffinplus/docker-nginx-php7.2.svg?label=github%20%E2%98%85)](https://github.com/griffinplus/docker-nginx-php7.2)
 [![Github Stars](https://img.shields.io/github/contributors/griffinplus/docker-nginx-php7.2.svg)](https://github.com/griffinplus/docker-nginx-php7.2)
 [![Github Forks](https://img.shields.io/github/forks/griffinplus/docker-nginx-php7.2.svg?label=github%20forks)](https://github.com/griffinplus/docker-nginx-php7.2)
 
 ## Overview
-This is a Docker image deriving from the [base-supervisor](https://github.com/GriffinPlus/docker-base/tree/master/base-supervisor) image. Summed up this image brings along the following features:
+This is a Docker image deriving from the [base-supervisor](https://github.com/GriffinPlus/docker-base/tree/master/base-supervisor)
+image. Summed up this image brings along the following features:
+
 - Based on Ubuntu 18.04 LTS
 - Support for running multiple services via *supervisord*
 - Griffin+ Container Startup System (see [here](https://github.com/GriffinPlus/docker-base/tree/master/base) for details)
@@ -45,7 +47,9 @@ The following PHP extensions are included in the image:
 
 ### Defining Content to Serve
 
-Any content that is placed below `/var/www/html` is served. There are two ways to let NGINX serve your content. You can either link in a volume containing your content or derive your own image from this image and copy the content into the said directory.
+Any content that is placed below `/var/www/html` is served. There are two ways to let NGINX serve your content. You can
+either link in a volume containing your content or derive your own image from this image and copy the content into the
+said directory.
 
 ### Environment Variables
 
@@ -64,8 +68,10 @@ With this process manager, there will be always at least 1 child.
 The following parameters are used:
 - `PHP_FPM_PM_MAX_CHILDREN` defines the maximum number of children that can be alive at the same time.
 - `PHP_FPM_PM_START_SERVERS` defines the number of children created on startup.
-- `PHP_FPM_PM_MIN_SPARE_SERVERS` defines the minimum number of children in 'idle' state (waiting to process). If the number of 'idle' processes is less than this number then some children will be created.
-- `PHP_FPM_PM_MAX_SPARE_SERVERS` defines the maximum number of children in 'idle' state (waiting to process). If the number of 'idle' processes is greater than this number then some children will be killed.
+- `PHP_FPM_PM_MIN_SPARE_SERVERS` defines the minimum number of children in 'idle' state (waiting to process).
+  If the number of 'idle' processes is less than this number then some children will be created.
+- `PHP_FPM_PM_MAX_SPARE_SERVERS` defines the maximum number of children in 'idle' state (waiting to process).
+  If the number of 'idle' processes is greater than this number then some children will be killed.
   
 ##### ondemand
 No children are created at startup. Children will be forked as needed when new requests are issued.
@@ -76,14 +82,19 @@ The following parameters are used:
 
 #### PHP_FPM_PM_MAX_CHILDREN
 
-The number of child processes to be created when `PHP_FPM_PM` is set to `static` and the maximum number of child processes when `PHP_FPM_PM` is set to `dynamic` or `ondemand`. This value sets the limit on the number of simultaneous requests that will be served. The below defaults are based on a server without much resources. Don't forget to tweak the settings to fit your needs.
+The number of child processes to be created when `PHP_FPM_PM` is set to `static` and the maximum number of child
+processes when `PHP_FPM_PM` is set to `dynamic` or `ondemand`. This value sets the limit on the number of simultaneous
+requests that will be served. The defaults below are based on a server without much resources. Don't forget to tweak
+the settings to fit your needs.
+
 Used when `PHP_FPM_PM` is set to `static`, `dynamic` or `ondemand`.
 
 Default Value: `5`
 
 #### PHP_FPM_PM_MAX_REQUESTS
 
-The number of requests each child process should execute before respawning. This can be useful to work around memory leaks in 3rd party libraries. For endless request processing specify `0`.
+The number of requests each child process should execute before respawning. This can be useful to work around memory
+leaks in 3rd party libraries. For endless request processing specify `0`.
 
 Default Value: `0`
 
@@ -126,7 +137,8 @@ Default Value: `32M`
 
 #### STARTUP_VERBOSITY
 
-Determines the verbosity of the *Griffin+ Container Startup System* (see [here](https://github.com/griffinplus/docker-base-supervisor) for details).
+Determines the verbosity of the *Griffin+ Container Startup System* (see [here](https://github.com/GriffinPlus/docker-base/tree/master/base)
+for details).
 
 - 0 => Logging is disabled.
 - 1 => Only errors are logged.
